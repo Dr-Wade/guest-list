@@ -8,7 +8,8 @@ module.exports = {
       swDest: "service-worker.js",
       clientsClaim: true,
       skipWaiting: true,
-      exclude: [/\.js$/, /\.css$/, /\.html$/, /\.map$/, /_redirects/],
+      navigateFallback: "index.html",
+      exclude: [/\.map$/, /_redirects/],
       // Define runtime caching rules.
       runtimeCaching: [
         {
@@ -23,7 +24,7 @@ module.exports = {
         },
         {
           urlPattern: /\.(?:css|js)$/,
-          handler: "networkFirst",
+          handler: "cacheFirst",
           options: {
             networkTimeoutSeconds: 5,
             cacheName: "assets",
