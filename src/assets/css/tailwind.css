@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://unpkg.com/pattern.css');
+
+html {
+    font-family: 'Arvo', serif;
+}
+
+button:focus {
+  outline:0
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-duration: 0.25s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-slow-enter-active, .fade-slow-leave-active {
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter, .fade-leave-active, .fade-slow-enter, .fade-slow-leave-active {
+  opacity: 0
+}

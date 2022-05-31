@@ -1,0 +1,6 @@
+{
+    "app": {
+        "baseUrl": "https://guests.tombre.fr",
+        "name": "Guest List"
+    }
+}
