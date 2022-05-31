@@ -1,7 +1,7 @@
 <template>
 	<div id="app" class="min-h-screen h-full w-full text-gray-900 bg-gray-200 flex flex-col space-y-5 py-8 px-4">
 		<h1 class="text-center text-xl">Guest List</h1>
-		<SearchBox class="mx-auto" />
+		<SearchBox class="mx-auto w-80" />
 		<div class="py-5">
 			<h1 class="text-center text-2xl mb-2">{{selectedGuest ? selectedGuest.Name : 'Aucune sélection' }}</h1>
 			<p class="text-center text-xl font-bold">{{selectedGuest ? 'Table ' + selectedGuest.Table : '&nbsp;'}}</p>
