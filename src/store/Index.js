@@ -20,7 +20,7 @@ export default new Vuex.Store({
     },
     getters: {
         searchResults: (state) => {
-            return GuestList.filter((guest) => guest.Name.startsWith(state.searchQuery))
+            return GuestList.filter((guest) => state.searchQuery.length && guest.Name.startsWith(state.searchQuery)).slice(0, 20)
         }
     },
     plugins: [vuexLocal.plugin]

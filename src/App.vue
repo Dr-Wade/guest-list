@@ -1,13 +1,13 @@
 <template>
-	<div id="app" class="min-h-screen w-full text-gray-900 bg-gray-200 flex flex-col space-y-5 py-8 px-4">
+	<div id="app" class="min-h-screen h-full w-full text-gray-900 bg-gray-200 flex flex-col space-y-5 py-8 px-4">
 		<h1 class="text-center text-xl">Guest List</h1>
-		<SearchBox />
+		<SearchBox class="mx-auto" />
 		<div class="py-5">
 			<h1 class="text-center text-2xl mb-2">{{selectedGuest ? selectedGuest.Name : 'Aucune sélection' }}</h1>
 			<p class="text-center text-xl font-bold">{{selectedGuest ? 'Table ' + selectedGuest.Table : '&nbsp;'}}</p>
 		</div>
-		<div class="relative">
-			<img class="absolute inset-0 object-cover" :src="require('@/assets/img/background.png')">
+		<div class="relative mx-auto">
+			<img class="w-80 object-cover" :src="require('@/assets/img/background.png')">
 			<img v-for="table in Tables" :key="'table-' + table" 
 				:class="selectedGuest && selectedGuest.Table == table + 1 ? 'opacity-100' : 'opacity-0'"
 				class="absolute inset-0 object-cover transition-opacity duration-500"
