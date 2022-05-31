@@ -24,9 +24,9 @@ module.exports = {
         },
         {
           urlPattern: /\.(?:css|js)$/,
-          handler: "cacheFirst",
+          handler: "networkFirst",
           options: {
-            networkTimeoutSeconds: 5,
+            networkTimeoutSeconds: 2,
             cacheName: "assets",
             expiration: {
               maxEntries: 50
